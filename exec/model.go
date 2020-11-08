@@ -19,7 +19,7 @@ package exec
 import (
 	"fmt"
 
-	"github.com/chaosblade-io/chaosblade-exec-os/exec"
+	"github.com/chenhy97/chaosblade-exec-os/exec"
 	"github.com/chaosblade-io/chaosblade-spec-go/spec"
 )
 
@@ -48,6 +48,7 @@ func NewDockerExpModelSpec() *dockerExpModelSpec {
 		newDiskCommandSpecForDocker(),
 		newMemCommandModelSpecForDocker(),
 		newFileCommandSpecForDocker(),
+		newStraceCommandSpecForDocker(),
 	}
 	containerSelfModelSpec := NewContainerCommandSpec()
 
@@ -62,7 +63,23 @@ func NewDockerExpModelSpec() *dockerExpModelSpec {
 	modelSpec.addExpModels(expModelCommandSpecs...)
 	return modelSpec
 }
-
+func newStraceCommandSpecForDocker() spec.ExpModelCommandSpec {
+	straceCommandModelSpec := exec.NewKernelInjectCommandSpec()
+	for _,action := range straceCommandModelSpec.Actions() {
+		v := interface{}(action)
+		switch v.(type) {
+		case *exec.StraceDelayActionSpec:
+			action.SetExample(
+				`The process which pid is 1 will be delayed by 3 seconds when invokes the mmap syscall
+				blade create docker strace delay --pid 1 --times 3s --syscall-name mmap --delay-loc enter`)
+		case *exec.StraceErrorActionSpec:
+			action.SetExample(
+				`The process which pid is 1 will return error X when invokes the mmap syscall
+				blade create docker strace error --pid 1 --syscall-name mmap --return-value X`)
+		}
+	}
+	return straceCommandModelSpec
+}
 func newNetworkCommandModelSpecForDocker() spec.ExpModelCommandSpec {
 	networkCommandModelSpec := exec.NewNetworkCommandSpec()
 	for _, action := range networkCommandModelSpec.Actions() {
