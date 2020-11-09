@@ -6,6 +6,8 @@ github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb0
 github.com/PuerkitoBio/purell v1.0.0/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=
 github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2/go.mod h1:uGdkoq3SwY9Y+13GIhn11/XLaGBb4BfwItxLd5jeuXE=
 github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d/go.mod h1:3eOhrUMpNV+6aFIbp5/iudMxNCF27Vw2OZgy4xEx0Fg=
+github.com/chaosblade-io/chaosblade-exec-docker v0.8.0 h1:uMQ+5jt+T94Vi+dooMu4FvJP5IQgXIWTNGrP47qK/5c=
+github.com/chaosblade-io/chaosblade-exec-docker v0.8.0/go.mod h1:7sW9oYIfS2JQtP2lYAR68zVIFPolQTCX3x7whikgoZY=
 github.com/chaosblade-io/chaosblade-exec-os v0.4.0 h1:yNUGhBFD3dA2+BulDCXL8fAyZvmiOp+HVOczvhVke1c=
 github.com/chaosblade-io/chaosblade-exec-os v0.4.0/go.mod h1:os4QqiAHjuzurJFH6JdMayqjMsNhUWD9LL8nlb0TEJk=
 github.com/chaosblade-io/chaosblade-exec-os v0.4.1-0.20200110074748-6dcc3e972904 h1:FZ/5pgI3c3e0U2zF7nljRdVYEh7qsZq9QNsbE7GrjeY=
@@ -67,6 +69,8 @@ github.com/chaosblade-io/chaosblade-spec-go v0.7.0 h1:EPBG8ZjWNjErgjdDaZqI/9UwZL
 github.com/chaosblade-io/chaosblade-spec-go v0.7.0/go.mod h1:xUF+8r54FphQjBR8fVPnweVqzu7EitE15UsnZ57O5gk=
 github.com/chaosblade-io/chaosblade-spec-go v0.8.0 h1:Lmlly8bWmX7UEvnXJQ7YA06kZbJACVY9CzFrzMQtwIE=
 github.com/chaosblade-io/chaosblade-spec-go v0.8.0/go.mod h1:xUF+8r54FphQjBR8fVPnweVqzu7EitE15UsnZ57O5gk=
+github.com/chenhy97/chaosblade-exec-os v0.8.1-0.20201108132938-0c133c98d1e4 h1:RfUs2KO1SCeEqwLkSU/EEx/7dV3b7KllFtRd+efQyWU=
+github.com/chenhy97/chaosblade-exec-os v0.8.1-0.20201108132938-0c133c98d1e4/go.mod h1:iP17BuTi0PLweYvstSHgiaFVOQr3nWtXgnF4XTc5+lM=
 github.com/containerd/cgroups v0.0.0-20191011165608-5fbad35c2a7e/go.mod h1:OApqhQ4XNSNC13gXIwDjhOQxjWa/NxkwZXJ1EvqT0ko=
 github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e/go.mod h1:F5haX7vjVVG0kc13fIWeqUViNPyEJxv/OmvnBo0Yme4=
 github.com/davecgh/go-spew v0.0.0-20151105211317-5215b55f46b2/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
